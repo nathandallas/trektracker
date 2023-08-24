@@ -1,13 +1,12 @@
-import React from 'react'
-import Table from './components/Table/Table'
-
+import React from "react";
+import ListContainer from "./components/ListContainer/ListContainer";
 
 function App() {
-  return (
-    <>
-    <Table />
-    </>
-  )
+	return (
+		<>
+			<ListContainer />
+		</>
+	);
 }
 
-export default App
+export default App;
