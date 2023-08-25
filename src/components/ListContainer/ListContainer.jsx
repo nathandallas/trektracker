@@ -1,16 +1,19 @@
 import React from "react";
-import { Segment } from "semantic-ui-react";
+import { Grid } from "semantic-ui-react";
 import ChallengeList from "../ChallengeList/ChallengeList";
+import Map from "../Map/Map";
 
 export default function ListContainer() {
 	return (
-		<Segment.Group secondary style={{ padding: 20 }} compact>
-			<Segment>
-				<h2>Fire Tower Challenge</h2>
-			</Segment>
-			<Segment>
-				<ChallengeList />
-			</Segment>
-		</Segment.Group>
+		<Grid>
+			<Grid.Row>
+				<Grid.Column width={9}>
+					<Map />
+				</Grid.Column>
+				<Grid.Column width={20}>
+					<ChallengeList />
+				</Grid.Column>
+			</Grid.Row>
+		</Grid>
 	);
 }
