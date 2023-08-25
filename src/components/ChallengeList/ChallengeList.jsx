@@ -34,7 +34,7 @@ function ChallengeList() {
 				<Table.Body>
 					{APIdata.map((data) => {
 						return (
-							<Table.Row id={data.id}>
+							<Table.Row key={data.id}>
 								<Table.Cell collapsing>
 									<Checkbox />
 								</Table.Cell>

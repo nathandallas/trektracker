@@ -10,7 +10,7 @@ export default function ListContainer() {
 				<Grid.Column width={9}>
 					<Map />
 				</Grid.Column>
-				<Grid.Column width={20}>
+				<Grid.Column>
 					<ChallengeList />
 				</Grid.Column>
 			</Grid.Row>
