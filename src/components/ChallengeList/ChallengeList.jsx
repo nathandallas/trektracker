@@ -5,13 +5,15 @@ import {
 	Tr,
 	Th,
 	Td,
-	TableCaption,
 	TableContainer,
 	Checkbox,
 	Button,
 } from "@chakra-ui/react";
 
 function ChallengeList({ APIdata }) {
+	
+	//TODO: Store isChecked in local storage
+
 	return (
 		<div>
 			<TableContainer>

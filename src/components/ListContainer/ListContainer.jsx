@@ -4,13 +4,12 @@ import ChallengeList from "../ChallengeList/ChallengeList";
 import Map from "../Map/Map";
 import axios from "axios";
 
-export default function ListContainer() {
+export default function ListContainer({ challenge }) {
 	// fetch data from API
-	// TODO: Set up buttons to change dynamic url
+	// TODO: research Lifecycle Methods to see how we can update the challenge when a new tab is selected
 	const [APIdata, setAPIdata] = useState([]);
 
 	useEffect(() => {
-		const challenge = "FireTower";
 		axios
 			.get(
 				`https://api.steinhq.com/v1/storages/64e6c165eced9b09e9ec6ae3/${challenge}`
@@ -21,11 +20,17 @@ export default function ListContainer() {
 	}, []);
 
 	return (
-		<Box p={4} display="flex" maxH="80vh" alignItems="center" justifyContent="center">
-			<Box maxW="50vw" borderWidth="1px" borderRadius="lg" overflow="hidden">
+		<Box
+			p={4}
+			display="flex"
+			maxH="80vh"
+			alignItems="center"
+			justifyContent="center"
+		>
+			<Box maxW="40vw" borderWidth="1px" borderRadius="lg" overflow="hidden">
 				<Map APIdata={APIdata} />
 			</Box>
-			<Box mt={{ base: 4, md: 0 }} ml={{ md: 6 }}>
+			<Box overflowY="auto" maxH="80vh" >
 				<ChallengeList APIdata={APIdata} />
 			</Box>
 		</Box>
