@@ -22,15 +22,13 @@ export default function ListContainer({ challenge }) {
 	return (
 		<Box
 			p={4}
-			display="flex"
-			maxH="80vh"
-			alignItems="center"
+			display={{ md: "flex" }}
 			justifyContent="center"
 		>
-			<Box maxW="40vw" borderWidth="1px" borderRadius="lg" overflow="hidden">
+			<Box borderWidth="1px" borderRadius="2xl" overflow="hidden" minWidth="40vw" height={{ base: "80vh"}}>
 				<Map APIdata={APIdata} />
 			</Box>
-			<Box overflowY="auto" maxH="80vh" >
+			<Box mt={{base: "6px", md:"0"}} overflowY={{md: "auto"}} maxH="80vh" >
 				<ChallengeList APIdata={APIdata} />
 			</Box>
 		</Box>

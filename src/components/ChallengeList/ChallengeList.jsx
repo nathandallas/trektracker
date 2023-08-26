@@ -11,7 +11,6 @@ import {
 } from "@chakra-ui/react";
 
 function ChallengeList({ APIdata }) {
-	
 	//TODO: Store isChecked in local storage
 
 	return (
@@ -34,10 +33,10 @@ function ChallengeList({ APIdata }) {
 									<Td>
 										<Checkbox />
 									</Td>
-									<Td>{data.mountain}</Td>
+									<Td maxW="8rem" overflow="hidden">{data.mountain}</Td>
 									<Td isNumeric>{data.elevation} ft</Td>
 									<Td>
-										<Button>More Info</Button>
+										<Button size="sm">More Info</Button>
 									</Td>
 								</Tr>
 							);
