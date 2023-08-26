@@ -1,11 +1,11 @@
 import React from "react";
+import ChallengePicker from "./components/ChallengePicker/ChallengePicker";
 import "./App.css";
-import ListContainer from "./components/ListContainer/ListContainer";
 
 function App() {
 	return (
 		<>
-			<ListContainer />
+			<ChallengePicker />
 		</>
 	);
 }
