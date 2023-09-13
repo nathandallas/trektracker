@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { Box } from "@chakra-ui/react";
-import ChallengeList from "../ChallengeList/ChallengeList";
-import Map from "../Map/Map";
-import axios from "axios";
+import { useState, useEffect } from 'react';
+import { Box } from '@chakra-ui/react';
+import ChallengeList from './ChallengeList';
+import Map from './Map';
+import axios from 'axios';
 
 export default function ListContainer({ challenge }) {
 	// fetch data from API
@@ -22,13 +22,20 @@ export default function ListContainer({ challenge }) {
 	return (
 		<Box
 			p={4}
-			display={{ md: "flex" }}
-			justifyContent="center"
-		>
-			<Box borderWidth="1px" borderRadius="2xl" overflow="hidden" minWidth="40vw" height={{ base: "80vh"}}>
+			display={{ md: 'flex' }}
+			justifyContent='center'>
+			<Box
+				borderWidth='1px'
+				borderRadius='2xl'
+				overflow='hidden'
+				minWidth='40vw'
+				height={{ base: '80vh' }}>
 				<Map APIdata={APIdata} />
 			</Box>
-			<Box mt={{base: "6px", md:"0"}} overflowY={{md: "auto"}} maxH="80vh" >
+			<Box
+				mt={{ base: '6px', md: '0' }}
+				overflowY={{ md: 'auto' }}
+				maxH='80vh'>
 				<ChallengeList APIdata={APIdata} />
 			</Box>
 		</Box>
